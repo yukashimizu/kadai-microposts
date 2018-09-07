@@ -29,10 +29,10 @@
       </li>
       <li class="<%= 'active' if current_page?(likes_user_path(@user)) %>">
         <%= link_to likes_user_path(@user) do %>
-          Likes <span class="badge"><%= @count_likes %></span>
+          Likes <span class="badge"><%= @count_liked_microposts %></span>
         <% end %>
       </li>
     </ul>
-    <%= render "users", users: @followings %>
+    <%= render "microposts/microposts", microposts: @likes %>
   </div>
 </div>
